@@ -1,0 +1,25 @@
+"bilateral":
+  "sigma_r": 35
+  "sigma_s": 10
+  "radius": 4
+
+"median":
+  "radius": 1
+
+# "threshold":
+#   "min": 60
+#   "max": 120
+
+"threshold":
+  "min": 0.4
+  "max": 0.75
+
+"device": "/dev/video2"
+
+"image_path":
+  "gray"     : "docs/imgs/gray.jpg"
+  "median"   : "docs/imgs/median.jpg"
+  "bilateral": "docs/imgs/bilateral.jpg"
+  "gradient" : "docs/imgs/gradient.jpg"
+  "nms"      : "docs/imgs/nms.jpg"
+  "edge"     : "docs/imgs/edge.jpg"

@@ -1,0 +1,10 @@
+**/.vscode/
+
+**/bin/
+**/build/
+**/docs/
+
+**/__pycache__/
+**/*.ipynb
+
+handout/

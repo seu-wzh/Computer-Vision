@@ -1,0 +1,98 @@
+"train":
+  # "dataroot": "/home/dyhan/nusence/trainval"
+  # "version": "v1.0-trainval"
+  # "batch_nbr": 850
+  "dataroot": "/home/dyhan/nusence/mini"
+  "version": "v1.0-mini"
+  "batch_nbr": 100
+"val":
+  "dataroot": "/home/dyhan/nusence/mini"
+  "version": "v1.0-mini"
+  "batch_nbr": 20
+
+"base_len": 4
+"rand_mask":
+  - 1
+  - 2
+  - 3
+
+"labelroot": "data/label/samples"
+"resolution":  # C D H W
+  - 17         # occupied categories(excluding empty)
+  - 16
+  - 200
+  - 200
+"voxelsize": 0.5
+
+"category":
+  0 : "empty"
+  1 : "noise"
+  2 : "barrier"
+  3 : "bicycle"
+  4 : "bus"
+  5 : "car"
+  6 : "construction_vehicle"
+  7 : "motorcycle"
+  8 : "pedestrian"
+  9 : "traffic_cone"
+  10: "trailer"
+  11: "truck"
+  12: "driveable_surface"
+  13: "other_flat"
+  14: "sidewalk"
+  15: "terrain"
+  16: "manmade"
+  17: "vegetation"
+
+"weights":
+  0: 2.8e-05
+  1: 0
+  2: 0.01
+  3: 0.04
+  4: 0.05
+  5: 0.1
+  6: 0.1
+  7: 0.04
+  8: 0.1
+  9: 0.01
+  10: 0.1
+  11: 0.1
+  12: 0.1
+  13: 0.05
+  14: 0.05
+  15: 0.03
+  16: 0.01
+  17: 0.03
+# ---------------------------------- dataset --------------------------------- #
+"img_channels": 256
+"pcd_channels": 32
+"builtin_channels":
+  - 8
+  - 16
+  - 32
+"output_channels": 128
+# ----------------------------------- model ---------------------------------- #
+"use_cuda": true
+"cuda_devices":
+  "img": "cuda:0"
+  "inv": "cuda:1"
+  "pcd": "cuda:0"
+  "ada": "cuda:3"
+  "cls": "cuda:0"
+
+"down_sample": 2.
+
+"random_seed": 2023
+"epoch": 40
+"lr": 0.001
+"momentum": 0.9
+"decay": 0.98
+"patience": 5
+"pretrained": true
+"logdir": "log/"
+"modelroot": "data/checkpoint/"
+
+"log_freq":
+  "train": 10
+  "val": 10
+# -------------------------------- train & val ------------------------------- #
